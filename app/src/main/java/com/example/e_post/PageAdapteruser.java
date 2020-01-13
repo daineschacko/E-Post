@@ -22,15 +22,15 @@ public class PageAdapteruser extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new ChatFragment();
+                return new Home_user();
             case 1:
-                return new StatusFragment();
+                return new Poatcard_user();
             case 2:
-                return new CallFragment();
+                return new Speed_post_user();
             case 3:
-                return new CallFragment1();
+                return new Money_order();
             case 4:
-                return new CallFragment2();
+                return new Stamp_user();
             default:
                 return null;
         }

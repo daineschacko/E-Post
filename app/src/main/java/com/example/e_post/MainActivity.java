@@ -30,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
                 if (e1.getText().toString().isEmpty()){
                     e1.setError("null");
                 }
-                if (e2.getText().toString().isEmpty()){
+                else if (e2.getText().toString().isEmpty()){
                     e2.setError("null");
+                }
+                else if (e1.getText().toString().equals("user")&&e2.getText().toString().equals("123")) {
+                startActivity(new Intent(MainActivity.this,User_home.class));
                 }
             }
         });
