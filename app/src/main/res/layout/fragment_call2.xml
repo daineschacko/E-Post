@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:background="@drawable/bg"
+android:layout_height="match_parent"
+>
+
+
+    <LinearLayout
+        android:layout_width="453dp"
+        android:layout_height="763dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/img_post"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars[12]" />
+
+            <EditText
+                android:id="@+id/card_view"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="180dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Card ddetails"
+                android:inputType="textMultiLine" />
+
+            <Spinner
+                android:id="@+id/sp_paper_weight"
+                android:layout_width="300dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="230dp"
+                android:layout_height="30dp" />
+
+            <EditText
+                android:id="@+id/size"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="270dp"
+                android:ems="10"
+                android:hint="Size"
+                android:inputType="number" />
+
+            <Spinner
+                android:id="@+id/sp_orint"
+                android:layout_width="300dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="320dp"
+                android:layout_height="30dp" />
+
+            <EditText
+                android:id="@+id/rs"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="360dp"
+                android:ems="10"
+                android:hint="Rs"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="460dp"
+                android:background="@drawable/btn"
+                android:layout_marginRight="90dp"
+                android:text="Submit" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

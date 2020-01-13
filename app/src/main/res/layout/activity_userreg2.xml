@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="386dp"
+        android:layout_height="567dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/pin_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tp"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:padding="15dp" />
+
+        <Spinner
+            android:id="@+id/sp_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tb"
+            android:padding="15dp" />
+
+        <Spinner
+            android:id="@+id/sp_dist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tb"
+            android:padding="15dp" />
+
+        <Spinner
+            android:id="@+id/sp_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tb"
+            android:padding="15dp" />
+
+
+        <EditText
+            android:id="@+id/pass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tm"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/pass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tm"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+
+        <Button
+            android:id="@+id/signup_button_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="SIGN UP"
+            android:textAllCaps="false"
+            android:textColor="#FE5295"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

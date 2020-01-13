@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
+        app:cardCornerRadius="30dp"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/date_user_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="dd/mm/yy"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/name_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <Spinner
+                android:id="@+id/sp_dist_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <Spinner
+                android:id="@+id/sp_city_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:id="@+id/pin_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Pincode"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/we_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Weight"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/fee_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Rs"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/submit_speed_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/btn"
+                android:text="Submit" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
