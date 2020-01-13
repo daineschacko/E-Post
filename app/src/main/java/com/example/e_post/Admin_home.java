@@ -5,8 +5,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 
 import com.google.android.material.tabs.TabItem;
@@ -32,7 +34,19 @@ public class Admin_home extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
         //setSupportActionBar(toolbar);
-
+toolbar.inflateMenu(R.menu.menu);
+toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        int id=item.getItemId();
+        switch (id)
+        {
+            case R.id.action_setting:startActivity(new Intent(Admin_home.this,MainActivity.class));
+            break;
+        }
+        return false;
+    }
+});
         tabLayout = findViewById(R.id.tablayout);
         tabChats = findViewById(R.id.home_admn);
         tabStatus = findViewById(R.id.emp_admn);

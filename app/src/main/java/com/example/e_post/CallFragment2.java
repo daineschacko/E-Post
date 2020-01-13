@@ -1,10 +1,13 @@
 package com.example.e_post;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,7 +20,11 @@ import androidx.fragment.app.Fragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CallFragment2 extends Fragment {
+public class CallFragment2 extends Fragment implements
+        AdapterView.OnItemSelectedListener {
+
+    String[] weight = {"Standard","Premium"};
+    String[] orintation = {"Horizontal","Vertical"};
     EditText e1,e2,e3;
     Button btn1;
     ImageView img;
@@ -37,6 +44,23 @@ public class CallFragment2 extends Fragment {
         s2=root.findViewById(R.id.sp_orint);
         img=root.findViewById(R.id.img_post);
         btn1=root.findViewById(R.id.btn_stamp);
+
+
+        ArrayAdapter ab = new ArrayAdapter(getContext(), R.layout.support_simple_spinner_dropdown_item, weight);
+        ab.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+        s1.setAdapter(ab);
+
+        ArrayAdapter aba = new ArrayAdapter(getContext(), R.layout.support_simple_spinner_dropdown_item,orintation);
+        aba.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+        s2.setAdapter(aba);
+
+
+
+
+
+
+
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,12 +80,16 @@ public class CallFragment2 extends Fragment {
         return root;
     }
 
-
-
-
-
+    @Override
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+// Toast.makeText(getApplicationContext(),dance[position] , Toast.LENGTH_LONG).show();
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
 
     }
+
+}
 
 
 

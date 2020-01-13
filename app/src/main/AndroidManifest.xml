@@ -16,15 +16,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin_home"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name=".Employee_home"></activity>
+        <activity
+            android:name=".User_home"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Admin_home"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity android:name=".Admin_login" />
         <activity android:name=".Employe_reg" />
         <activity android:name=".Empl_reg" />
         <activity android:name=".userreg2" />
         <activity android:name=".ureg" />
-        <activity android:name=".User_home"/>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".splash"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

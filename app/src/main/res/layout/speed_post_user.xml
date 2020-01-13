@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="dd/mm/yy"
+                android:focusable="false"
                 android:inputType="date" />
 
             <EditText
@@ -42,11 +43,6 @@
 
             <Spinner
                 android:id="@+id/sp_dist_speed_user"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
-
-            <Spinner
-                android:id="@+id/sp_city_speed_user"
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
 

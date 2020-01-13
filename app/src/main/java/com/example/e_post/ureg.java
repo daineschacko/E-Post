@@ -37,6 +37,9 @@ public class ureg extends AppCompatActivity {
                 if (e3.getText().toString().isEmpty()){
                     e3.setError("null");
                 }
+                if (e3.getText().toString().length()<10){
+                    e3.setError("Enter a valid phone Number");
+                }
                 if (e4.getText().toString().isEmpty()){
                     e4.setError("null");
                 }
