@@ -1,7 +1,9 @@
 package com.example.e_post;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,9 +13,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
+import static com.example.e_post.R.id.tablayout;
+
 public class User_home extends AppCompatActivity {
 
-    Toolbar toolbar;
+    Toolbar toolbar,toolbar1;
     TabLayout tabLayout;
     ViewPager viewPager;
     PageAdapteruser pageAdapter;
@@ -31,7 +35,7 @@ public class User_home extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.app_name));
         //setSupportActionBar(toolbar);
 
-        tabLayout = findViewById(R.id.tablayout);
+        tabLayout = findViewById(tablayout);
         tabChats = findViewById(R.id.stamp_user);
         tabStatus = findViewById(R.id.Speed_user);
         tabCalls = findViewById(R.id.post_user);
@@ -40,6 +44,22 @@ public class User_home extends AppCompatActivity {
 
         pageAdapter = new PageAdapteruser(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
+toolbar.inflateMenu(R.menu.menu);
+toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        int id=item.getItemId();
+        switch (id)
+        {
+            case R.id.logout:
+                startActivity(new Intent(User_home.this,MainActivity.class));
+        }
+        return false;
+    }
+});
+
+
+
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

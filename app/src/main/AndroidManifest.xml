@@ -26,6 +26,7 @@
         <activity android:name=".Admin_login" />
         <activity android:name=".Employe_reg" />
         <activity android:name=".Empl_reg" />
+        <activity android:name=".Speed_postuser"/>
         <activity android:name=".userreg2" />
         <activity android:name=".ureg" />
         <activity

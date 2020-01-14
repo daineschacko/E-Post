@@ -41,7 +41,7 @@ toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
         int id=item.getItemId();
         switch (id)
         {
-            case R.id.action_setting:startActivity(new Intent(Admin_home.this,MainActivity.class));
+            case R.id.logout:startActivity(new Intent(Admin_home.this,MainActivity.class));
             break;
         }
         return false;

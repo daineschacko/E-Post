@@ -26,7 +26,7 @@ public class PageAdapteruser extends FragmentPagerAdapter {
             case 1:
                 return new Poatcard_user();
             case 2:
-                return new Speed_post_user();
+                return new Speed_postuser();
             case 3:
                 return new Money_order();
             case 4:
