@@ -41,15 +41,6 @@
 
 
         <EditText
-            android:id="@+id/pass1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/tm"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="15dp" />
-
-        <EditText
             android:id="@+id/pass2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

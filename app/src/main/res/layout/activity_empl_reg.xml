@@ -63,6 +63,7 @@
             android:background="@drawable/tp"
             android:hint="Phone Number"
             android:inputType="phone"
+            android:maxLength="10"
             android:padding="15dp" />
 
 

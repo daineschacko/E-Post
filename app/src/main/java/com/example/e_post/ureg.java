@@ -62,6 +62,10 @@ public class ureg extends AppCompatActivity {
               else  if (e3.getText().toString().length()<10){
                     e3.setError("Enter a valid phone Number");
                 }
+                else if(e3.getText().toString().length()<10)
+                {
+                    e3.setError("Invalid Phone Number");
+                }
                else if (e4.getText().toString().isEmpty()){
                     e4.setError("null");
                 }
@@ -76,7 +80,7 @@ public class ureg extends AppCompatActivity {
                     e.putString("uph",e3.getText().toString());
                     e.putString("uem",e4.getText().toString());
                     e.putString("uadr",e5.getText().toString());
-                    e.apply();
+
                 }
 
             }

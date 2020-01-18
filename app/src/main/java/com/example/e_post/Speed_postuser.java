@@ -112,89 +112,87 @@ Spinner s1;
                 if (e1.getText().toString().isEmpty()){
                     e1.setError("null");
                 }
-                if (e2.getText().toString().isEmpty()){
+               else if (e2.getText().toString().isEmpty()){
                     e2.setError("null");
                 }
-                if (e3.getText().toString().isEmpty()){
+                else if (e3.getText().toString().isEmpty()){
                     e3.setError("null");
                 }
-                if (e4.getText().toString().isEmpty()){
+                else if (e4.getText().toString().isEmpty()){
                     e4.setError("null");
                 }
-                if (e5.getText().toString().isEmpty()){
+                else if (e5.getText().toString().isEmpty()){
                     e5.setError("null");
                 }
 
+else {
 
-
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://androidprojecttechsays.000webhostapp.com/E-Post/speed_post_user.php",
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://androidprojecttechsays.000webhostapp.com/E-Post/speed_post_user.php",
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
 //If we are getting success from server
-                                Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
-                                if(response.equals("Success"))
-                                {
+                                    Toast.makeText(getActivity(), response, Toast.LENGTH_LONG).show();
+                                    if (response.equals("Success")) {
 
-                                    startActivity(new Intent(getContext(),Employe_reg.class));
-                                }
-                                try {
-                                    JSONArray jsonArray = new JSONArray(response);
-                                    for (int i = 0; i < jsonArray.length(); i++) {
-                                        JSONObject json_obj = jsonArray.getJSONObject(i);
+                                        Toast.makeText(getActivity(), "Success", Toast.LENGTH_LONG).show();
+                                    }
+                                    try {
+                                        JSONArray jsonArray = new JSONArray(response);
+                                        for (int i = 0; i < jsonArray.length(); i++) {
+                                            JSONObject json_obj = jsonArray.getJSONObject(i);
 //ba = json_obj.getString("balance");
 
 
-                                    }
+                                        }
 //Toast.makeText(Recharge.this, "your new balnce is "+ba, Toast.LENGTH_LONG).show();
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+
+                                    }
+
 
                                 }
+                            },
 
-
-                            }
-                        },
-
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
 //You can handle error here if you want
-                            }
+                                }
 
-                        }) {
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String, String> params = new HashMap<>();
+                            }) {
+                        @Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
+                            Map<String, String> params = new HashMap<>();
 //Adding parameters to request
 
-                        params.put("sdat",e1.getText().toString());
-                        params.put("snam",e2.getText().toString());
-                        params.put("spin",e3.getText().toString());
-                        params.put("swai",e4.getText().toString());
-                        params.put("sfee",e5.getText().toString());
-                        params.put("sdist",s1.getSelectedItem().toString());
+                            params.put("sdat", e1.getText().toString());
+                            params.put("snam", e2.getText().toString());
+                            params.put("spin", e3.getText().toString());
+                            params.put("swai", e4.getText().toString());
+                            params.put("sfee", e5.getText().toString());
+                            params.put("sdist", s1.getSelectedItem().toString());
 // params.put("confpass", confpass.getText().toString());
 // params.put("phone", phone.getText().toString());
 // Toast.makeText(MainActivity.this,"submitted",Toast.LENGTH_LONG).show();
 
 //returning parameter
-                        return params;
-                    }
+                            return params;
+                        }
 
-                };
+                    };
 
 // m = Integer.parseInt(ba) - Integer.parseInt(result.getContents());
 // balance.setText(m+"");
 
 
 //Adding the string request to the queue
-                RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-                requestQueue.add(stringRequest);
+                    RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+                    requestQueue.add(stringRequest);
 
 
-
-
+                }
             }
         });
 

@@ -47,7 +47,7 @@ android:layout_height="match_parent"
                 android:layout_marginTop="180dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="Card ddetails"
+                android:hint="Card details"
                 android:inputType="textMultiLine" />
 
             <Spinner
